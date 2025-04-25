@@ -1,14 +1,13 @@
-import turtle
-wn = turtle.Screen()
-wn.bgcolor("DarkSlateGrey")
-wn.title("Hello, Tosbik")
+# Find the day
+enterednumber = int(input("Enter a number: "))
 
-keratta = turtle.Turtle()
-keratta.color("light salmon")
-keratta.pensize(3)
+days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 
-for i in range(4):
-    keratta.forward(50)
-    keratta.left(90)
+def days_of_the_week(enterednumber):
+    number = enterednumber % 7
+    day = days[number]
+    print(day,  number)
 
-wn.mainloop()
+days_of_the_week(enterednumber)
+
+

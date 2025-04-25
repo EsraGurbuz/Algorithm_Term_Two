@@ -1,22 +1,9 @@
-import turtle
-wn = turtle.Screen()
-wn.bgcolor("DarkSlateGrey")
-wn.title("Hello, Tosbik")
+def day_you_return(starting_day_number, length_of_stay):
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    return_day_number = (starting_day_number + length_of_stay) % 7
+    return days[return_day_number]
 
-keratta = turtle.Turtle()
-keratta.color("light salmon")
-keratta.pensize(3)
-
-tosbik = turtle.Turtle()
-tosbik.color("MistyRose")
-tosbik.pensize(2)
-
-for i in range(3):
-    keratta.forward(80)
-    keratta.left(120)
-
-for j in range(4):
-    tosbik.forward(50)
-    tosbik.left(90)
-
-wn.mainloop()
+start_day = 3  # Wednesday
+length = 137
+returned_day = day_you_return(start_day, length)
+print(f"You return on a {returned_day}.")

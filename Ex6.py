@@ -1,29 +1,13 @@
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
-for i in months:
-    print("One of the months of the year is " + i)
+def is_rightangled(a, b, c):
+    result1 = a**2 == b**2 + c**2
+    result2 = b**2 == a**2 + c**2
+    result3 = c**2 == b**2 + a**2
+    return result1, result2, result3
 
-xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+first = int(input( "Enter a value: "))
+second = int(input( "Enter a value: "))
+third = int(input( "Enter a value: "))
 
-# For different row
-for i in xs:
-    print(i)
+r1, r2, r3 = is_rightangled(first, second, third)
 
-# For one row
-for i in xs:
-    print(i, end=" ")
-
-# Each number and its square on a new line
-for i in xs:
-    print(i, i*i)
-
-# Adds all the numbers from the list into a variable called "total"
-total = 0
-for i in xs:
-    total = total + i
-print(total)
-
-# Product of all the numbers in the list
-product = 1
-for i in xs:
-    product = product * i
-print(product)
+print(r1, r2, r3)
